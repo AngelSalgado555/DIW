@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cursores </title>
+    <style> 
+
+        .principal{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        .principal div{
+            border: 4px solid red;
+            border-radius: 5px;
+            background-color: aqua;
+        }
+        .caja1{
+            cursor: pointer;
+        }
+    
+        .caja1:active{
+            cursor: copy;
+        }
+
+        .caja2{
+            cursor: crosshair;
+        }
+
+        .caja2:active{
+            cursor: move;
+        }
+
+        .caja3{
+            cursor: wait;
+        }
+
+        .caja3:active{
+            cursor: alias;
+        }
+
+        .caja4{
+            cursor: zoom-in;
+        }
+
+        .caja4:active{
+            cursor: no-drop;
+        }
+
+        .caja5{
+            cursor: grab;
+        }
+
+        .caja5:active{
+            cursor: help;
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <div class="caja1">
+            Hola, este tiene pointer y copy
+        </div>
+        <div class="caja2">
+            Hola, este tiene crosshair y move
+        </div>
+        <div class="caja3">
+            Hola, este tiene wait y alias
+        </div>
+        <div class="caja4">
+            Hola, este tiene zoom-in y no-drop
+        </div>
+        <div class="caja5">
+            Hola, este tiene grab y help
+        </div>
+    </div>
+</body>
+</html>
