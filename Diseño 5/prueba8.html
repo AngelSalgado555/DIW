@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Probando Background-origin </title>
+    <style>
+        body{
+            background-image: url(Imagenes/timmy.gif);
+            color: white;
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+
+        .caja{
+            border: 40px dotted yellow;
+            font-size: 50px;
+            height: 300px;
+            width: 300px;
+            padding: 40px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            background-image: url(Imagenes/Zeta.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-origin: padding-box;
+        }
+
+        .caja:active{
+            border: 40px dotted yellow;
+            font-size: 50px;
+            height: 300px;
+            width: 300px;
+            padding: 40px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            background-image: url(Imagenes/ganso.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-origin: padding-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <div class="caja">
+
+        </div>
+    </div>
+</body>
+</html>
