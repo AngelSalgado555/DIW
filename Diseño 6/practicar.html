@@ -22,10 +22,6 @@
             max-width: 1000px;
         }
 
-        .img-container{
-            background-repeat: no-repeat;
-            
-        }
 
         .form-inscrip{
             min-width: 400px;
@@ -59,34 +55,64 @@
 
         .form-img{
             flex: 1;
+            padding: 10px;
+            display: flex;
+            min-width: 300px;
+            max-width: 300px;
+            order: 1;
+        }
+
+        .img-container{
+            margin: auto;
+            padding: 20px;
+            border-radius: 10%;
+            background: #fff;
+        }
+        .form-img img{
+            width: 100%;
+
+        }
+
+        .form input[type="submit"]{
+            background:  #1e9cd688;
+        }
+
+        .form input[type="submit"]:hover{
+            background:  #136b9488;
+        }
+        .form input[type="submit"]:focus{
+            background:  #5fc0ec88;
+        }
+        .form input[type="submit"]:active{
+            background: linear-gradient(to bottom, transparent, #1e9cd688);
         }
     </style>
 </head>
 <body>
     <div class="flex-container">
-            <form class="form-inscrip">
-                <div class="form_imput">
-                    <input type="text" name="correo" placeholder="Correo Electronico">
-                </div>
-                <div class="form_imput">
-                    <input type="text" name="contraseña" placeholder="Introduce la contraseña">
-                </div>
-                <div class="form_imput">
-                    <input type="text" name="comentario" placeholder="Comentario (opcional)" class="comentario">
-                </div>
-                <div class="form_imput">
-                    <textarea class="form_imput" placeholder="Mensaje">
-                    </textarea>
-                </div>
-                <div class="form_imput">
-                    <input type="submit" name="enviar" >
-                </div>
-            </form>
-            <div class="form-img"> 
-                <div class="img-container">
-                    <img src="/Imagenes/images.jpeg">
-                </div>
+        <form class="form-inscrip">
+            <div class="form_imput">
+                <input type="text" name="correo" placeholder="Correo Electronico">
             </div>
+            <div class="form_imput">
+                <input type="text" name="contraseña" placeholder="Introduce la contraseña">
+            </div>
+            <div class="form_imput">
+                <input type="text" name="comentario" placeholder="Comentario (opcional)" class="comentario">
+            </div>
+            <div class="form_imput">
+                <textarea class="form_imput" placeholder="Mensaje">
+                </textarea>
+            </div>
+            <div class="form_imput">
+                <input type="submit" name="enviar" >
+            </div>
+        </form>
+        <div class="form-img"> 
+            <div class="img-container">
+                <img src="/Imagenes/images.jpeg">
+            </div>
+        </div>
     </div>
 </body>
 </html>
