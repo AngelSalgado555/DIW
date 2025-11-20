@@ -10,70 +10,83 @@
             margin: 0;
         }
 
-        .container{
+        .flex-container{
             display: flex;
+            align-items: center;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            background-color: rgb(211, 139, 183);
-            width: 1300px;
-            height: 400px;
-            
-            
+            background: rgb(236, 161, 214);
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 25px;
+            max-width: 1000px;
         }
 
-        .caja1{
+        .img-container{
             background-repeat: no-repeat;
-            background-image: url(/Imagenes/images.jpeg);
-            margin: 60px;
-            margin-top: 80px;
-            min-width: 200px;
-            width: 200px;
-            height: 300px;
-        }
-
-        .caja2 form{
-            justify-content: space-between;
-            margin: 40px;
-            margin-left: 140px;
-            width: 400px;
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             
         }
 
-        form input{
+        .form-inscrip{
+            min-width: 400px;
+            flex: 1;
             text-align: center;
-            width: 500px;
-            font-family:fantasy;
-            background-color: rgb(218, 90, 165);
-            border-bottom: 5px solid white;
-            border: inherit;
+            padding: 40px;
+            
         }
 
-        .comentario{
-            height: 130px;
+        .form_imput{
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 3px solid #fff;
+            background: #ea7fee33;
+            color: white;
         }
 
+        .form_imput:focus{
+            background: linear-gradient(to bottom, transparent, #1e9cd688);
+            outline: none;
+            border-bottom: 3px solid rgb(233, 87, 213);
+        }
+
+
+        .form textarea{
+            min-height: 150px;
+            resize: none;
+        }
+
+        .form-img{
+            flex: 1;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="caja1">
-            
-        </div>
-        <div class="caja2">
-            <form>
-                <input type="text" name="correo" placeholder="Correo Electronico">
-                <br>
-                <input type="text" name="contraseña" placeholder="Introduce la contraseña">
-                <br>
-                <input type="text" name="comentario" placeholder="Comentario (opcional)" class="comentario">
-                <br>
-                <input type="submit" name="enviar" >
+    <div class="flex-container">
+            <form class="form-inscrip">
+                <div class="form_imput">
+                    <input type="text" name="correo" placeholder="Correo Electronico">
+                </div>
+                <div class="form_imput">
+                    <input type="text" name="contraseña" placeholder="Introduce la contraseña">
+                </div>
+                <div class="form_imput">
+                    <input type="text" name="comentario" placeholder="Comentario (opcional)" class="comentario">
+                </div>
+                <div class="form_imput">
+                    <textarea class="form_imput" placeholder="Mensaje">
+                    </textarea>
+                </div>
+                <div class="form_imput">
+                    <input type="submit" name="enviar" >
+                </div>
             </form>
-        </div>
+            <div class="form-img"> 
+                <div class="img-container">
+                    <img src="/Imagenes/images.jpeg">
+                </div>
+            </div>
     </div>
 </body>
 </html>

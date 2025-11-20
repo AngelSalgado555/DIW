@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ejercicio de Grid </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            background: radial-gradient(circle, rgb(160, 37, 160), rgb(70, 128, 235), red);
+        }
+
+        .container{
+            display: grid;
+            background-color: #0f0;
+            grid-template-rows: repeat(3, 150px);
+            grid-template-columns: repeat(3, 150px 1fr);
+        }
+
+        .caja{
+            border: 2px solid black;
+            background: rgb(174, 213, 240);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caja">1-GR</div>
+        <div class="caja">2-GR</div>
+        <div class="caja">3-GR</div>
+        <div class="caja">4-GR</div>
+        <div class="caja">5-GR</div>
+        <div class="caja">6-GR</div>
+        <div class="caja">7-GR</div>
+        <div class="caja">8-GR</div>
+        <div class="caja">9-GR</div>
+        <div class="caja">1-GR</div>
+        <div class="caja">2-GR</div>
+        <div class="caja">3-GR</div>
+        <div class="caja">4-GR</div>
+        <div class="caja">5-GR</div>
+        <div class="caja">6-GR</div>
+        <div class="caja">7-GR</div>
+        <div class="caja">8-GR</div>
+        <div class="caja">9-GR</div>
+    </div>
+</body>
+</html>
