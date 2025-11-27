@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Alineación </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            background: radial-gradient(circle, pink, red, orange);
+            padding: 20px;
+        }
+
+        .container{
+            display: grid;
+            background: gray;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-gap: 15px 25px; */
+            height: 800px;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .caja{
+            border: 2px solid #000;
+            background: rgb(115, 252, 2);
+            font-size: 50px;
+            padding: 50px;
+        }
+
+        .caja:first-child{
+            align-self: start;
+            justify-self: start;
+        }
+
+        .caja:nth-child(2){
+            background: red;
+        }
+
+        .caja:nth-child(8){
+            background: red;
+        }
+
+        .caja:nth-child(3){
+            align-self: flex-start;
+            justify-self: end;
+        }
+
+        .caja:nth-child(4){
+            background: red;
+            justify-self: end;
+        }
+
+        .caja:nth-child(6){
+            background: red;
+            justify-self: start;
+        }
+
+
+        .caja:nth-child(7){
+            align-self: flex-end;
+            justify-self: start;
+        }
+
+        .caja:nth-child(9){
+            align-self: flex-end;
+            justify-self: flex-end;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caja">1</div>
+        <div class="caja">2</div>
+        <div class="caja">3</div>
+        <div class="caja">4</div>
+        <div class="caja">5</div>
+        <div class="caja">6</div>
+        <div class="caja">7</div>
+        <div class="caja">8</div>
+        <div class="caja">9</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Practicando Alineación </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            background: radial-gradient(circle, pink, red, orange);
+            padding: 20px;
+        }
+
+        .container{
+            display: grid;
+            background: gray;
+            grid-template-rows: repeat(3, 200px);
+            grid-template-columns: repeat(3, minmax(200px, 150px));
+            /* grid-gap: 15px 25px; */
+            height: 800px;
+            justify-content: end;
+            align-content: end;
+
+            align-items: center;
+            justify-items: center;
+        }
+
+        .caja{
+            border: 2px solid #000;
+            background: rgb(115, 252, 2);
+            font-size: 50px;
+            padding: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caja">1</div>
+        <div class="caja">2</div>
+        <div class="caja">3</div>
+        <div class="caja">4</div>
+        <div class="caja">5</div>
+        <div class="caja">6</div>
+        <div class="caja">7</div>
+        <div class="caja">8</div>
+        <div class="caja">9</div>
+        <div class="caja">10</div> <!-- Este es más grande porque el 10 abarca más espacio -->
+    
+    </div>
+</body>
+</html>
