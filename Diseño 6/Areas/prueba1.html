@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Practicando Areas </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            background: radial-gradient(circle, pink, red, orange);
+        }
+
+        .container{
+            background-color: gray;
+            margin: 10px;
+            display: grid;
+            grid-template-areas: 
+            "header header header"
+            "aside aside main"
+            "aside aside main"
+            "aside aside main"
+            "aside aside main"
+            "footer footer footer";
+            grid-template-rows: repeat(auto-fill 1fr);
+            height: 95vh;
+            border: 5px solid white;
+        }
+
+        .header{
+            background-color: rgb(210, 243, 191);
+            grid-area: header;
+        }
+
+        .main{
+            background: rgb(171, 242, 245);
+            grid-area: main;
+        }
+
+        .aside{
+            background: rgb(232, 247, 191);
+            grid-area: aside;
+        }
+
+        .footer{
+            background: orange;
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="main">Main</div>
+        <div class="aside">Aside</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

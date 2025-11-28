@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Practicar animaciones </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            background: radial-gradient(circle, pink, red, orange);
+            padding: 20px;
+        }
+
+        .container{
+            background: lightblue;
+            padding: 20px 5px;
+        }
+
+        .caja{
+            background-color: lightyellow;
+            height: 150px;
+            width: 150px;
+            margin: 20px;
+            animation-name: movimiento;
+            animation-duration: 4s;
+            position: relative;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-delay: 1s;
+            animation-timing-function: cubic-bezier(0.08, 0.60, 0.70, 0.39);
+
+        }
+
+        @keyframes movimiento{
+            0%{
+                left: 0;
+                background: lightslategrey;
+            }
+            
+            25%{
+                background-color: lightcoral;
+            }
+
+            50%{
+                background-color: lime;
+            }
+
+            75%{
+                background: pink;
+            }
+
+            100%{
+                left: 90%;
+                background: red;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caja">1</div>
+    </div>
+</body>
+</html>
