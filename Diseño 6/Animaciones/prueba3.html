@@ -28,7 +28,7 @@
             animation-name: movimiento;
             animation-duration: 3s;
             position: relative;
-            animation-iteration-count: 6;
+            animation-iteration-count: infinite;
             animation-direction: alternate;
 
         }
@@ -49,11 +49,14 @@
 
             75%{
                 background: pink;
+                border-radius: 50px;
             }
 
             100%{
                 left: 90%;
                 background: red;
+                border-radius: 50px;
+                box-shadow: 5px 5px 10px;
             }
         }
 
