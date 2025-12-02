@@ -8,10 +8,12 @@
         *{
             padding: 0;
             margin: 0;
+            box-sizing: border-box;
         }
 
         body{
             background: radial-gradient(circle, pink, red, orange);
+            padding: 20px;
         }
 
         .container{
@@ -27,37 +29,42 @@
 
         .header{
             background-color: rgb(171, 242, 245);
-            flex-basis: 70px;
+            height: 20vh;
             
         }
 
         .main{
             background-color: rgb(236, 138, 73);
-            flex-basis: 150px;
-            flex-grow: 1;
-            flex-shrink: 0;
             
         }
 
         .aside{
             background-color: pink;
-            flex-basis: 200px;
-            flex-grow: 1;
-            flex-shrink: 0;
+            
         }
 
         .footer{
             background-color: lime;
-            flex-basis: 50px;
-            flex-grow: 1;
+            height: 20vh;
         }
 
         @media screen and (min-width: 700px) {
             .container{
-                display: flex;
-                flex-direction: row;
+                height: 100vh;
             }
 
+            .contenido-mid{
+                display: flex;
+                flex: 1;
+            }
+
+            .main{
+                flex: 3;
+            }
+
+            .aside{
+                flex: 1;
+            }
             
         }
 
@@ -66,8 +73,10 @@
 <body>
     <div class="container">
         <header class="header">Con Flex </header>
-        <main class="main">Main</main>
-        <aside class="aside">Aside </aside>
+            <div class="contenido-mid">
+                <main class="main">Main</main>
+                <aside class="aside">Aside </aside>
+            </div>
         <footer class="footer">Footer</footer>
     </div>
 </body>
