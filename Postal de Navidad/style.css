@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(circle, red, white, rgb(0, 119, 0));
+    padding: 20px;
+}
+
+.cabecera{
+    display: grid;
+    background: linear-gradient(to right, red, white, rgb(0, 107, 0));
+    border: 2px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    height: 9vh;
+    width: 99vw;
+}
+
+.container{
+    background: linear-gradient(to right, red, white, green);
+    border: 2px solid black;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.mensaje{
+    animation-name: text;
+    animation-duration: 3s;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+
+.pie{
+    display: grid;
+    
+    background: linear-gradient(to right, red, white, rgb(0, 107, 0));
+    border: 2px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    height: 9vh;
+    width: 99vw;
+}
