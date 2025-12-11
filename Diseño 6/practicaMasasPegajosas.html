@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Practicando con dos masa pegajosas </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: radial-gradient(circle, pink, red, orange);
+            padding: 20px;
+        }
+        .container{
+            filter: contrast(20);
+            background: #fff;
+        }
+
+        .caja{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background: rgb(137, 61, 235);
+            margin: 40px;
+            border-radius: 50%;
+            filter: blur(15px);
+        }
+
+        .caja:first-child{
+            animation: pegajoso 2s alternate infinite;
+        }
+
+        @keyframes pegajoso{
+            0%{
+                transform: translate(0);
+            }
+            100%{
+                transform: translate(160px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caja"></div>
+        <div class="caja"></div>
+    </div>
+</body>
+</html>

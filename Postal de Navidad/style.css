@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/terminal-grotesque-open');
+@import url('https://fonts.cdnfonts.com/css/monchila');
 
 *{
     padding: 0;
@@ -20,30 +20,68 @@ body{
     align-content: center;
     height: 9vh;
     width: 99vw;
-    font-family: 'Terminal Grotesque Open', sans-serif;
+    font-family: 'Monchila', sans-serif;
     font-size: 35px;
 }
 
 .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     background: linear-gradient(to right, red, white, green);
     border: 2px solid black;
     border-radius: 8px;
     justify-content: center;
+    height: 90vh;
+    
 }
 
 .mensaje{
-    animation-name: text;
-    animation-duration: 3s;
+    display: grid;
+    grid-column: 3/4;
+    border: 2px solid black;
+    margin: 30px;
+    border-radius: 2px;
+    padding: 5px;
+    animation-name: movimiento;
+    animation-duration: 4s;
     position: relative;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    align-items: center;
 
 }
 
+@keyframes movimiento{
+    0%{
+        right: 0%;
+    }
+    25%{
+
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px;
+        transform: rotateZ(7deg);
+    }
+    50%{
+        right: 40%;
+        border-radius: 12px;
+        box-shadow: 2px 2px 3px;
+        transform: rotateZ(-7deg);
+    }
+    75%{
+        right: 60%;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px;
+    }
+    100%{
+        right: 80%;
+        border-radius: 28px;
+        box-shadow: 7px 7px 12px;
+    }
+}
 
 .pie{
     display: grid;
-    
     background: linear-gradient(to right, white, rgb(0, 104, 0), green);
     border: 2px solid black;
     border-radius: 10px;
@@ -51,6 +89,7 @@ body{
     align-content: center;
     height: 9vh;
     width: 99vw;
-    font-family: 'Terminal Grotesque Open', sans-serif;
+    font-family: 'Monchila', sans-serif;
     font-size: 35px;
 }
+
