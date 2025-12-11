@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/monchila');
+@import url('https://fonts.cdnfonts.com/css/railing-personal-use');
 
 *{
     padding: 0;
@@ -19,7 +20,7 @@ body{
     justify-content: center;
     align-content: center;
     height: 9vh;
-    width: 99vw;
+    width: 97vw;
     font-family: 'Monchila', sans-serif;
     font-size: 35px;
 }
@@ -32,51 +33,110 @@ body{
     border: 2px solid black;
     border-radius: 8px;
     justify-content: center;
-    height: 90vh;
-    
+    height: 78vh;
+    width: 97vw;
+    align-items: center;
 }
 
-.mensaje{
+.navidad{
     display: grid;
-    grid-column: 3/4;
-    border: 2px solid black;
-    margin: 30px;
+    grid-column: 1/2;
+    color: green;
+    margin: 40px;
+    width: 200px;
+    height: 70px;
     border-radius: 2px;
     padding: 5px;
+    justify-content: center;
+    font-size: 30px;
+    animation-name: movimiento2;
+    animation-duration: 4s;
+    position: relative;
+    animation-direction: alternate;
+    align-items: center;
+    font-family: 'Railing personal use', sans-serif;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movimiento2{
+    0%{
+        left: 0%;
+    }
+    25%{
+        left: 25%;
+        border-radius: 5px;
+        
+        transform: skew(-7deg);
+    }
+    50%{
+        left: 50%;
+        border-radius: 8px;
+        
+        transform: skew(7deg);
+    }
+    75%{
+        left: 75%;
+        border-radius: 14px;
+        
+        transform: skew(-10deg);
+    }
+    100%{
+        left: 110%;
+        border-radius: 20px;
+        font-size: 40px;
+        transform: skew(10deg);
+    }
+}
+
+.feliz{
+    display: grid;
+    grid-column: 3/4;
+    color: red;
+    margin: 40px;
+    width: 170px;
+    height: 70px;
+    border-radius: 2px;
+    padding: 5px;
+    justify-content: center;
+    font-size: 30px;
     animation-name: movimiento;
     animation-duration: 4s;
     position: relative;
-    animation-iteration-count: infinite;
     animation-direction: alternate;
     align-items: center;
+    font-family: 'Railing personal use', sans-serif;
+    animation-fill-mode: forwards;
 
 }
+
 
 @keyframes movimiento{
     0%{
         right: 0%;
     }
     25%{
-
+        right: 10%;
         border-radius: 5px;
-        box-shadow: 1px 1px 2px;
-        transform: rotateZ(7deg);
+        
+        transform: skew(7deg);
     }
     50%{
-        right: 40%;
-        border-radius: 12px;
-        box-shadow: 2px 2px 3px;
-        transform: rotateZ(-7deg);
+        right: 25%;
+        border-radius: 8px;
+        
+        transform: skew(-7deg);
     }
     75%{
-        right: 60%;
-        border-radius: 20px;
-        box-shadow: 5px 5px 10px;
+        right: 40%;
+        border-radius: 14px;
+        
+        transform: skew(10deg);
     }
     100%{
-        right: 80%;
-        border-radius: 28px;
-        box-shadow: 7px 7px 12px;
+        right: 55%;
+        border-radius: 20px;
+        font-size: 40px;
+        transform: skew(-10deg);
     }
 }
 
@@ -88,7 +148,7 @@ body{
     justify-content: center;
     align-content: center;
     height: 9vh;
-    width: 99vw;
+    width: 97vw;
     font-family: 'Monchila', sans-serif;
     font-size: 35px;
 }
