@@ -14,7 +14,7 @@ body{
 
 .cabecera{
     display: grid;
-    background: linear-gradient(to right, red, rgb(207, 0, 0), white);
+    background: red;
     border: 2px solid black;
     border-radius: 10px;
     justify-content: center;
@@ -71,20 +71,20 @@ body{
     50%{
         left: 50%;
         border-radius: 8px;
-        
+        transform: rotate(7deg);
         transform: skew(7deg);
     }
     75%{
         left: 75%;
         border-radius: 14px;
         
-        transform: skew(-10deg);
+        transform: rotate(-10deg);
     }
     100%{
         left: 110%;
         border-radius: 20px;
-        font-size: 40px;
-        transform: skew(10deg);
+        font-size: 45px;
+        
     }
 }
 
@@ -123,26 +123,26 @@ body{
     50%{
         right: 25%;
         border-radius: 8px;
-        
+        transform: rotate(-7deg);
         transform: skew(-7deg);
     }
     75%{
         right: 40%;
         border-radius: 14px;
         
-        transform: skew(10deg);
+        transform: rotate(10deg);
     }
     100%{
         right: 55%;
         border-radius: 20px;
-        font-size: 40px;
-        transform: skew(-10deg);
+        font-size: 45px;
+        
     }
 }
 
 .pie{
     display: grid;
-    background: linear-gradient(to right, white, rgb(0, 104, 0), green);
+    background: green;
     border: 2px solid black;
     border-radius: 10px;
     justify-content: center;
