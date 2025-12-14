@@ -1,155 +1,585 @@
-@import url('https://fonts.cdnfonts.com/css/monchila');
-@import url('https://fonts.cdnfonts.com/css/railing-personal-use');
-
-*{
-    padding: 0;
+/* Reset básico */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: radial-gradient(circle, red, white, rgb(0, 119, 0));
+body {
+    font-family: 'Dancing Script', cursive, sans-serif;
+    background: linear-gradient(to bottom, #0a2e38, #1a5f7a);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
     padding: 20px;
 }
 
-.cabecera{
-    display: grid;
-    background: red;
-    border: 2px solid black;
-    border-radius: 10px;
-    justify-content: center;
-    align-content: center;
-    height: 9vh;
-    width: 97vw;
-    font-family: 'Monchila', sans-serif;
-    font-size: 35px;
-}
-
-.container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    background: linear-gradient(to right, red, white, green);
-    border: 2px solid black;
-    border-radius: 8px;
-    justify-content: center;
-    height: 78vh;
-    width: 97vw;
-    align-items: center;
-}
-
-.navidad{
-    display: grid;
-    grid-column: 1/2;
-    color: green;
-    margin: 40px;
-    width: 200px;
-    height: 70px;
-    border-radius: 2px;
-    padding: 5px;
-    justify-content: center;
-    font-size: 30px;
-    animation-name: movimiento2;
-    animation-duration: 4s;
+.container {
+    max-width: 1000px;
+    width: 100%;
+    background: rgba(10, 46, 56, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border: 8px solid #8b4513;
     position: relative;
-    animation-direction: alternate;
-    align-items: center;
-    font-family: 'Railing personal use', sans-serif;
-    animation-fill-mode: forwards;
 }
 
-@keyframes movimiento2{
-    0%{
-        left: 0%;
-    }
-    25%{
-        left: 25%;
-        border-radius: 5px;
-        
-        transform: skew(-7deg);
-    }
-    50%{
-        left: 50%;
-        border-radius: 8px;
-        transform: rotate(7deg);
-        transform: skew(7deg);
-    }
-    75%{
-        left: 75%;
-        border-radius: 14px;
-        
-        transform: rotate(-10deg);
-    }
-    100%{
-        left: 110%;
-        border-radius: 20px;
-        font-size: 45px;
-        
-    }
+.container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #00ff00, #00ffff, #0000ff, #9900ff);
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0.3;
 }
 
-.feliz{
-    display: grid;
-    grid-column: 3/4;
-    color: red;
-    margin: 40px;
-    width: 170px;
-    height: 70px;
-    border-radius: 2px;
-    padding: 5px;
-    justify-content: center;
-    font-size: 30px;
-    animation-name: movimiento;
-    animation-duration: 4s;
+/* Encabezado */
+.header {
+    text-align: center;
+    padding: 25px 20px;
+    background: linear-gradient(to right, #b30000, #cc3300);
     position: relative;
-    animation-direction: alternate;
+    overflow: hidden;
+}
+
+.header h1 {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 3.2rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.header .fa-star {
+    color: gold;
+    text-shadow: 0 0 10px gold;
+    margin: 0 15px;
+    animation: twinkle 1.5s infinite alternate;
+}
+
+/* Contenido principal */
+.content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    font-family: 'Railing personal use', sans-serif;
-    animation-fill-mode: forwards;
-
 }
 
-
-@keyframes movimiento{
-    0%{
-        right: 0%;
-    }
-    25%{
-        right: 10%;
-        border-radius: 5px;
-        
-        transform: skew(7deg);
-    }
-    50%{
-        right: 25%;
-        border-radius: 8px;
-        transform: rotate(-7deg);
-        transform: skew(-7deg);
-    }
-    75%{
-        right: 40%;
-        border-radius: 14px;
-        
-        transform: rotate(10deg);
-    }
-    100%{
-        right: 55%;
-        border-radius: 20px;
-        font-size: 45px;
-        
-    }
-}
-
-.pie{
-    display: grid;
-    background: green;
-    border: 2px solid black;
-    border-radius: 10px;
+.postal {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
-    height: 9vh;
-    width: 97vw;
-    font-family: 'Monchila', sans-serif;
-    font-size: 35px;
+    gap: 40px;
+    width: 100%;
 }
 
+/* Árbol de Navidad - CORREGIDO */
+.postal-front {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #1a3c29, #0a2e1a);
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    min-height: 500px;
+}
+
+.tree-container {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Partes del árbol - CORREGIDAS */
+.tree-top, .tree-middle, .tree-bottom {
+    position: absolute;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 150px solid;
+    width: 0;
+    height: 0;
+}
+
+.tree-top {
+    top: 0;
+    border-bottom-color: #0a5c36;
+    z-index: 3;
+}
+
+.tree-middle {
+    top: 100px;
+    border-bottom-color: #0e7e46;
+    z-index: 2;
+}
+
+.tree-bottom {
+    top: 200px;
+    border-bottom-color: #129556;
+    z-index: 1;
+}
+
+/* Tronco del árbol - CORREGIDO */
+.tree-trunk {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 60px;
+    background: #8b4513;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Estrella en la cima - CORREGIDA */
+.tree-star {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: gold;
+    font-size: 2.5rem;
+    z-index: 10;
+    text-shadow: 0 0 20px gold;
+    animation: spin 4s linear infinite;
+}
+
+/* Decoraciones del árbol - CORREGIDAS */
+.decoration {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    z-index: 4;
+    transform: translateX(-50%);
+}
+
+.decoration1 {
+    background: #ff0000;
+    top: 60px;
+    left: 50%;
+    animation: glow-red 2s infinite alternate;
+}
+
+.decoration2 {
+    background: #00ff00;
+    top: 120px;
+    left: 40%;
+    animation: glow-green 2s infinite alternate;
+}
+
+.decoration3 {
+    background: #ffff00;
+    top: 120px;
+    left: 60%;
+    animation: glow-yellow 2s infinite alternate;
+}
+
+.decoration4 {
+    background: #0000ff;
+    top: 180px;
+    left: 35%;
+    animation: glow-blue 2s infinite alternate;
+}
+
+.decoration5 {
+    background: #ff00ff;
+    top: 180px;
+    left: 65%;
+    animation: glow-pink 2s infinite alternate;
+}
+
+.decoration6 {
+    background: #00ffff;
+    top: 240px;
+    left: 50%;
+    animation: glow-cyan 2s infinite alternate;
+}
+
+/* Contenedor de regalos - CORREGIDO */
+.gifts-container {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    z-index: 2;
+    width: 220px;
+    justify-content: center;
+}
+
+/* Regalos bajo el árbol - CORREGIDOS */
+.gift {
+    height: 40px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.gift1 {
+    background: linear-gradient(to right, #ff0000, #cc0000);
+    width: 60px;
+}
+
+.gift2 {
+    background: linear-gradient(to right, #00cc00, #009900);
+    width: 80px;
+    height: 50px;
+}
+
+.gift3 {
+    background: linear-gradient(to right, #0000ff, #000099);
+    width: 70px;
+    height: 45px;
+}
+
+.gift::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.gift::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Luces navideñas */
+.lights {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.light {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    animation: light-change 3s infinite alternate;
+}
+
+.light:nth-child(1) { animation-delay: 0s; }
+.light:nth-child(2) { animation-delay: 0.5s; }
+.light:nth-child(3) { animation-delay: 1s; }
+.light:nth-child(4) { animation-delay: 1.5s; }
+.light:nth-child(5) { animation-delay: 2s; }
+.light:nth-child(6) { animation-delay: 2.5s; }
+
+/* Mensaje de la postal */
+.postal-message {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background: linear-gradient(135deg, #8b0000, #b30000);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.message-content {
+    text-align: center;
+}
+
+.message-content h2 {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.message-content .fa-heart {
+    color: #ffcccc;
+    margin: 0 10px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.message-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.signature {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ffffcc;
+    font-family: 'Mountains of Christmas', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ornaments {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.ornament {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: bounce 2s infinite;
+}
+
+.ornament:nth-child(1) { animation-delay: 0s; color: #ff6666; }
+.ornament:nth-child(2) { animation-delay: 0.2s; color: #ffff66; }
+.ornament:nth-child(3) { animation-delay: 0.4s; color: #66ff66; }
+.ornament:nth-child(4) { animation-delay: 0.6s; color: #6666ff; }
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(to right, #0a5c36, #0e7e46);
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    margin-bottom: 15px;
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 1.8rem;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 1.8rem;
+}
+
+.footer-icons i {
+    animation: float 3s infinite ease-in-out;
+}
+
+.footer-icons i:nth-child(1) { animation-delay: 0s; color: #0a5c36; }
+.footer-icons i:nth-child(2) { animation-delay: 0.6s; color: gold; }
+.footer-icons i:nth-child(3) { animation-delay: 1.2s; color: #66ccff; }
+.footer-icons i:nth-child(4) { animation-delay: 1.8s; color: #ff6666; }
+.footer-icons i:nth-child(5) { animation-delay: 2.4s; color: #0a5c36; }
+
+/* Copos de nieve */
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    color: #fff;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    top: -30px;
+    animation: snowfall linear infinite;
+}
+
+.snowflake:nth-child(1) {
+    left: 10%;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+.snowflake:nth-child(2) {
+    left: 20%;
+    animation-duration: 12s;
+    animation-delay: 1s;
+}
+.snowflake:nth-child(3) {
+    left: 30%;
+    animation-duration: 15s;
+    animation-delay: 2s;
+}
+.snowflake:nth-child(4) {
+    left: 40%;
+    animation-duration: 11s;
+    animation-delay: 3s;
+}
+.snowflake:nth-child(5) {
+    left: 60%;
+    animation-duration: 13s;
+    animation-delay: 4s;
+}
+.snowflake:nth-child(6) {
+    left: 80%;
+    animation-duration: 14s;
+    animation-delay: 5s;
+}
+
+/* Animaciones */
+@keyframes snowfall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(600px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.7; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes spin {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(360deg); }
+}
+
+@keyframes glow-red {
+    0% { box-shadow: 0 0 5px #ff0000; }
+    100% { box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000; }
+}
+
+@keyframes glow-green {
+    0% { box-shadow: 0 0 5px #00ff00; }
+    100% { box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+}
+
+@keyframes glow-yellow {
+    0% { box-shadow: 0 0 5px #ffff00; }
+    100% { box-shadow: 0 0 20px #ffff00, 0 0 30px #ffff00; }
+}
+
+@keyframes glow-blue {
+    0% { box-shadow: 0 0 5px #0000ff; }
+    100% { box-shadow: 0 0 20px #0000ff, 0 0 30px #0000ff; }
+}
+
+@keyframes glow-pink {
+    0% { box-shadow: 0 0 5px #ff00ff; }
+    100% { box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+}
+
+@keyframes glow-cyan {
+    0% { box-shadow: 0 0 5px #00ffff; }
+    100% { box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff; }
+}
+
+@keyframes light-change {
+    0% { background-color: #ff0000; }
+    33% { background-color: #00ff00; }
+    66% { background-color: #0000ff; }
+    100% { background-color: #ffff00; }
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .postal {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .message-content h2 {
+        font-size: 2rem;
+    }
+    
+    .message-text {
+        font-size: 1.3rem;
+    }
+    
+    .signature {
+        font-size: 1.5rem;
+    }
+    
+    .tree-container {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .tree-container {
+        transform: scale(0.7);
+    }
+    
+    .message-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .message-text {
+        font-size: 1.1rem;
+    }
+    
+    .ornaments {
+        gap: 15px;
+    }
+    
+    .ornament {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .gifts-container {
+        transform: translateX(-50%) scale(0.8);
+    }
+}
