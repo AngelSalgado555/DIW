@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Modales </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modal-1">
+                    Abrir Modal 1
+                </button>
+
+                <div class="modal fade" id="modal-1" tabindex="-1" aria-hidden="true" aria-labelledby="label-modal-1">
+                    <!-- Caja de dialogo -->
+                     <div class="modal-dialog">
+                        <!-- Contenido de la Caja -->
+                        <div class="modal-content">
+                            <!-- Encabezado de la caja -->
+                            <div class="modal-header">
+                                <h5 class="modal-title"> Titulo del modal </h5>
+                                <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                            </div>
+
+                            <!-- Cuerpo de la caja -->
+                            <div class="modal-body">
+                                <h1>Hola Mundo </h1>
+                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae distinctio quae aut placeat? Quia voluptas cupiditate consequuntur ipsa nisi sit deserunt repellat explicabo laboriosam ut illum, distinctio qui temporibus natus.</p>
+                            </div>
+
+                            <!-- Pie de pagina de la caja -->
+                             <div class="modal-footer">
+                                <button class="btn btn-light" type="button" data-bs-dismiss="modal" aria-label="Cerrar"> Cancelar </button>
+                                <button class="btn btn-primary"> Aceptar </button>
+                             </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modal-2">
+                    Abrir Modal 2
+                </button>
+
+                <div class="modal fade" id="modal-2" tabindex="-1" aria-hidden="true" aria-labelledby="label-modal-2" data-bs-backdrop="static">
+                    <!-- Caja de dialogo -->
+                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <!-- Contenido de la Caja -->
+                        <div class="modal-content">
+                            <!-- Encabezado de la caja -->
+                            <div class="modal-header">
+                                <h5 class="modal-title"> Titulo del modal </h5>
+                                <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                            </div>
+
+                            <!-- Cuerpo de la caja -->
+                            <div class="modal-body">
+                                <div class="" style="height: 1000px;">
+                                    <h1>Hola Mundo </h1>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae distinctio quae aut placeat? Quia voluptas cupiditate consequuntur ipsa nisi sit deserunt repellat explicabo laboriosam ut illum, distinctio qui temporibus natus.</p>
+                                </div>
+                                
+                            </div>
+
+                            <!-- Pie de pagina de la caja -->
+                             <div class="modal-footer">
+                                <button class="btn btn-light" type="button" data-bs-dismiss="modal" aria-label="Cerrar"> Cancelar </button>
+                                <button class="btn btn-primary"> Aceptar </button>
+                             </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

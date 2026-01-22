@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas Agrupadas </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body{
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                <!-- Grupo de Lista -->
+                 <ul class="list-group">
+                    <li class="list-group-item"> Elemento #1 </li>
+                    <li class="list-group-item active"> Elemento #2 </li>
+                    <li class="list-group-item disabled"> Elemento #3 </li>
+                    <li class="list-group-item"> Elemento #4 </li>
+                    <li class="list-group-item"> Elemento #5 </li>
+                 </ul>
+            </div>
+
+            <div class="col">
+                <!-- Grupo de Lista con enlace -->
+                 <ul class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action"> Elemento #1 </a>
+                    <a href="#" class="list-group-item list-group-item-action"> Elemento #2 </a>
+                    <a href="#" class="list-group-item list-group-item-action"> Elemento #3 </a>
+                    <a href="#" class="list-group-item list-group-item-action"> Elemento #4 </a>
+                    <a href="#" class="list-group-item list-group-item-action"> Elemento #5 </a>
+                 </ul>
+            </div>
+
+            <div class="col">
+                <!-- Lista Flush  -->
+                 <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> Elemento #1 </li>
+                    <li class="list-group-item active"> Elemento #2 </li>
+                    <li class="list-group-item disabled"> Elemento #3 </li>
+                    <li class="list-group-item"> Elemento #4 </li>
+                    <li class="list-group-item"> Elemento #5 </li>
+                 </ul>
+            </div>
+
+            <div class="col">
+                <!-- Lista con numeros -->
+                 <ul class="list-group list-group-numbered">
+                    <li class="list-group-item"> Elemento #1 </li>
+                    <li class="list-group-item active"> Elemento #2 </li>
+                    <li class="list-group-item disabled"> Elemento #3 </li>
+                    <li class="list-group-item"> Elemento #4 </li>
+                    <li class="list-group-item"> Elemento #5 </li>
+                 </ul>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-6">
+                <!-- Grupo de Lista -->
+                 <ul class="list-group">
+                    <li class="list-group-item list-group-item-primary"> Elemento #1 </li>
+                    <li class="list-group-item list-group-item-secondary"> Elemento #2 </li>
+                    <li class="list-group-item list-group-item-success"> Elemento #3 </li>
+                    <li class="list-group-item list-group-item-danger"> Elemento #4 </li>
+
+
+                    <!-- Con enlaces -->
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-warning"> Elemento #1 </a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-info"> Elemento #2 </a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-light"> Elemento #3 </a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-dark"> Elemento #4 </a>
+                 </ul>
+            </div>
+
+            <div class="col">
+                <!-- List Group con Badges y Checkbox-->
+                 <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between aling-items-center">
+                        Elmento #1 
+                        <span class="bagde bg-primary">Badge</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between aling-items-center">
+                        Elmento #2 
+                        <span class="bagde bg-primary">Badge</span>
+                    </li>
+                    <label class="list-group-item">
+                        <input type="checkbox" id="checkbox-1" name="checkbox-1" class="form-check-input me-1">
+                        Checkbox 1
+                    </label>
+                    <label class="list-group-item">
+                        <input type="checkbox" id="checkbox-2" name="checkbox-2" class="form-check-input me-1 ">
+                        Checkbox 2
+                    </label>
+                 </ul>
+            </div>
+
+
+            <div class="col">
+                <!-- Lista Personalizada -->
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between">
+                            <h5> Titulo de mi articulo </h5>
+                            <small> Hace 1 dia </small>
+                        </div>
+                        <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam architecto</p>
+                        <small class="text-muted"> Ver más </small>
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between">
+                            <h5> Titulo de mi articulo </h5>
+                            <small> Hace 1 dia </small>
+                        </div>
+                        <p class="mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint quo deleniti blanditiis .</p>
+                        <small class="text-muted"> Ver más </small>
+                    </a>
+
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex justify-content-between">
+                            <h5> Titulo de mi articulo </h5>
+                            <small> Hace 1 dia </small>
+                        </div>
+                        <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam architecto</p>
+                        <small class="text-muted"> Ver más </small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+</body>
+</html>

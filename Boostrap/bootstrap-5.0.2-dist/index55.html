@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rangos </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6">
+                <label for="rango" class="form-label"> Precio </label>
+                <input type="range" class="form-range" id="rango" min="0" max="1000" step="250">
+                <div class="d-flex justify-content-between">
+                    <p class="form-text"> 0 €</p>
+                    <p class="form-text"> 1000 €</p>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <label for="disable-rango" class="form-label"> Valor </label>
+                <input type="range" class="form-range" id="disable-rango">
+
+                <div class="d-flex justify-content-between"> 
+                    <p class="form-text"> 0 € </p>
+                    <p class="form-text"> 1000 € </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
