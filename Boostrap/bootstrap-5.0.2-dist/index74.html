@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Wrap </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body{
+            background-color: aqua
+        }
+
+        .contenedor{
+            margin-bottom: 20px;
+            background: #0d6efd;
+            color: #fff;
+            max-width: 1150px;
+            min-height: 100px;
+        }
+
+        .contenedor > div {
+            background: rgb(73, 158, 238);
+            padding: 15px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col">
+                <h4>Wrap</h4>
+                <hr>
+
+                <p>.flex-nowrap</p>
+                <div class="contenedor d-flex flex-nowrap">
+                    <div>Caja 1</div>
+                    <div>Caja 2</div>
+                    <div>Caja 3</div>
+                    <div>Caja 4</div>
+                    <div>Caja 5</div>
+                    <div>Caja 6</div>
+                    <div>Caja 7</div>
+                    <div>Caja 8</div>
+                    <div>Caja 9</div>
+                    <div>Caja 10</div>
+                    <div>Caja 11</div>
+                    <div>Caja 12</div>
+                    <div>Caja 13</div>
+                    <div>Caja 14</div>
+                    <div>Caja 15</div>
+                </div>
+
+                <p>.flex-wrap</p>
+                <div class="contenedor d-flex flex-wrap">
+                    <div>Caja 1</div>
+                    <div>Caja 2</div>
+                    <div>Caja 3</div>
+                    <div>Caja 4</div>
+                    <div>Caja 5</div>
+                    <div>Caja 6</div>
+                    <div>Caja 7</div>
+                    <div>Caja 8</div>
+                    <div>Caja 9</div>
+                    <div>Caja 10</div>
+                    <div>Caja 11</div>
+                    <div>Caja 12</div>
+                    <div>Caja 13</div>
+                    <div>Caja 14</div>
+                    <div>Caja 15</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col">
+                <div class="contenedor d-flex flex-nowrap">
+                    <div class="order-3">Caja 1</div>
+                    <div class="order-2">Caja 2</div>
+                    <div class="order-1">Caja 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

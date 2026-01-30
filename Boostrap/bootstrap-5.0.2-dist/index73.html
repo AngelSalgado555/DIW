@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> No se </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body{
+            background: plum;
+        }
+
+        .contenedor{
+            margin-bottom: 20px;
+            background: #0d6efd;
+            color: #fff;
+            height: 100px;
+        }
+
+        .contenedor > div {
+            background: rgb(73, 158, 238);
+            padding: 15px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col">
+                <h4>Fill</h4>
+                <div class="contenedor d-flex align-items-start">
+                    <div>Lorem ipsum dolor sit </div>
+                    <div class="flex-fill">.flex-fill</div>
+                    <div class="flex-fill">.flex-fill</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col">
+                <h4>Aling Items</h4>
+                <hr>
+                <p> .aling-items-start</p>
+                <div class="contenedor d-flex align-items-start">
+                    <div>Caja 1</div>
+                    <div>Caja 2</div>
+                    <div>Caja 3</div>
+                </div>
+
+                <h4>Aling Items</h4>
+                <hr>
+                <p>.aling-items-center</p>
+                <div class="contenedor d-flex align-items-center">
+                    <div>Caja 1</div>
+                    <div>Caja 2</div>
+                    <div>Caja 3</div>
+                </div>
+
+                <h4>Aling Items</h4>
+                <hr>
+                <p> .aling-items-end</p>
+                <div class="contenedor d-flex align-items-end">
+                    <div>Caja 1</div>
+                    <div>Caja 2</div>
+                    <div>Caja 3</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col">
+                <h4>Align self </h4>
+                <hr>
+                <div class="contenedor d-flex justify-content-around">
+                    <div class="align-self-start"> .align-self-start</div>
+                    <div class="align-self-center"> .align-self-center</div>
+                    <div class="align-self-end"> .align-self-end</div>
+                    <div class="align-self-baseline"> .align-self-baseline</div>
+                    <div class="align-self-stretch"> .align-self-stretch</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col">
+                <h4>Auto Margins</h4>
+                <hr>
+                <div class="contenedor d-flex justify-content-end">
+                    <div class="me-auto">.me-auto</div>
+                    <div>Caja 2</div>
+                    <div>Caja 3</div>
+                </div>
+
+                <div class="contenedor d-flex justify-content-end">
+                    <div>Caja 1</div>
+                    <div>Caja 2</div>
+                    <div class="ms-auto">.ms-auto</div>
+                </div>
+
+                <div class="contenedor d-flex flex-column align-items-start" style="height: 250px;">
+                    <div class="mb-auto">.mb-auto</div>
+                    <div>Caja 2</div>
+                    <div>Caja 3</div>
+                </div>
+
+                <div class="contenedor d-flex flex-column align-items-end" style="height: 250px;">
+                    <div>Caja 1</div>
+                    <div>Caja 2</div>
+                    <div class="mt-auto">.mt-auto</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

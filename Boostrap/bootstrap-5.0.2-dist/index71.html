@@ -3,41 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Toasts </title>
+    <title> Más </title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-    <div class="toast-container position-absolute p-3" style="right: 0; top: 0;">
-        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <strong class="me-auto"> Título </strong>
-                <small>Hace 1 minuto</small>
-                <button type="button" class="btn-close" aria-label="Close"></button>
-                <div class="toast-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </div>
-            </div>
-        </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip arriba"> Tooltip Arriba</button>
 
-        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <strong class="me-auto"> Título </strong>
-                <small>Hace 1 minuto</small>
-                <button type="button" class="btn-close" aria-label="Close"></button>
-                <div class="toast-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </div>
-            </div>
-        </div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip abajo"> Tooltip Abajo</button>
 
-        <div class="toast show bg-primary text-white" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="d-flex">
-                <div class="toast-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 me-auto"></button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip izquierda"> Tooltip Izquierda</button>
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip derecha"> Tooltip Derecha</button>
+
+                
             </div>
         </div>
     </div>
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+    </script>
 </body>
 </html>
